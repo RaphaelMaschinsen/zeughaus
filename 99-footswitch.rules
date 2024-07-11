@@ -1,4 +1,4 @@
-SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", ATTRS{name}=="MKEYBOARD Keyboard", KERNELS=="1-1.2.2", SYMLINK+="footswitch1"
-SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", ATTRS{name}=="MKEYBOARD Keyboard", KERNELS=="1-1.2.3", SYMLINK+="footswitch2"
-SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", ATTRS{name}=="MKEYBOARD Keyboard", KERNELS=="1-1.2.5", SYMLINK+="footswitch3"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.2*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch1"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.3*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch2"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.5*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch3"
   
