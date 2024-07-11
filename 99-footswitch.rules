@@ -1,0 +1,4 @@
+SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", KERNELS=="1-1.2.2", SYMLINK+="footswitch1"
+SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", KERNELS=="1-1.2.3", SYMLINK+="footswitch2"
+SUBSYSTEM=="input", ATTRS{idVendor}=="0426", ATTRS{idProduct}=="3011", KERNELS=="1-1.2.5", SYMLINK+="footswitch3"
+  
