@@ -6,30 +6,27 @@ import threading
 import signal
 import sys
 
-# Path to audio files
 audio_files = {
     'KEY_A': 'File1.wav',
     'KEY_B': 'File2.wav',
     'KEY_Y': 'File3.wav',
 }
 
-# Path to the input devices (footswitches)
 device_paths = ['/dev/footswitch1', '/dev/footswitch2', '/dev/footswitch3']
 
-# Initialize the input devices
 devices = [InputDevice(path) for path in device_paths]
 
-# A flag to indicate if the program is running
 running = True
-# Lock for thread-safe audio control
 playback_lock = threading.Lock()
+current_process = None
 
 def play_audio(file_path):
+    global current_process
     with playback_lock:
-        # Stop any currently playing audio
-        subprocess.run(['pkill', 'aplay'])
-        # Play the new audio file
-        subprocess.run(['aplay', file_path])
+        if current_process:
+            current_process.terminate()
+            current_process.wait()
+        current_process = subprocess.Popen(['aplay', file_path])
 
 def monitor_device(device):
     print(f'Start monitoring {device.path}')
@@ -59,13 +56,11 @@ def signal_handler(sig, frame):
         device.close()
     sys.exit(0)
 
-# Register signal handler for graceful shutdown
 signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
 print(f'Listening for key presses on {device_paths}...')
 
-# Create a separate thread for each device to handle events concurrently
 threads = []
 for device in devices:
     thread = threading.Thread(target=monitor_device, args=(device,))
@@ -76,6 +71,5 @@ for device in devices:
 while running:
     signal.pause()
 
-# Clean up and close devices
 for device in devices:
     device.close()
