@@ -21,12 +21,15 @@ devices = [InputDevice(path) for path in device_paths]
 
 # A flag to indicate if the program is running
 running = True
+# Lock for thread-safe audio control
+playback_lock = threading.Lock()
 
 def play_audio(file_path):
-    # Stop any currently playing audio
-    subprocess.run(['pkill', 'aplay'])
-    # Play the new audio file
-    subprocess.run(['aplay', file_path])
+    with playback_lock:
+        # Stop any currently playing audio
+        subprocess.run(['pkill', 'aplay'])
+        # Play the new audio file
+        subprocess.run(['aplay', file_path])
 
 def monitor_device(device):
     print(f'Start monitoring {device.path}')
