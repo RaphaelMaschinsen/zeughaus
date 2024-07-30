@@ -4,9 +4,9 @@ This repository is intended to help set up the Raspberry Pis. There are three sp
 
 ## Available Branches
 
-1. **Zeughaus-Switch**: This branch contains the setup for the Zeughaus footswitch audio player project, which uses 3 USB footswitches to play 3 different audio files.
-2. **Zeughaus-Switch-simple**: This branch provides a simplified version of the Zeughaus footswitch audio player project, which uses only one USB footswitches to play an audio files.
-3. **Zeughaus-loop**: This branch contains the setup for a looping audio playback project which just endlessly plays an audio file.
+1. **zeughaus-switch**: This branch contains the setup for the Zeughaus footswitch audio player project, which uses 3 USB footswitches to play 3 different audio files.
+2. **zeughaus-switch-simple**: This branch provides a simplified version of the Zeughaus footswitch audio player project, which uses only one USB footswitches to play an audio files.
+3. **zeughaus-loop**: This branch contains the setup for a looping audio playback project which just endlessly plays an audio file.
 
 ## Getting Started
 
