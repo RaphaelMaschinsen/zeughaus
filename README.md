@@ -6,6 +6,7 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 
 - [Setup](#setup)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
+  - [Configuring Keyboard Layout](#configuring-keyboard-layout)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
   - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
   - [Installing Required Packages](#installing-required-packages)
@@ -23,9 +24,17 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 2. Install and run the Raspberry Pi Imager.
 3. Choose the Model you are using (at the time of writing this it is Raspberry Pi 2 Model B)
 4. Select "Raspberry Pi OS (32-bit)" as the operating system.
-5. In the Settings unselect everything except of 'Set Username and Password' and choose 'pi' as the username and as the password
+5. In the Settings unselect everything except for 'Set Username and Password' and choose 'pi' as the username and as the password.
 6. Choose your SD card and click "Continue" to start the installation process.
 7. Once the process is complete, insert the SD card into your Raspberry Pi and power it on.
+
+### Configuring Keyboard Layout
+
+To change the keyboard layout, use the `raspi-config` tool:
+
+    sudo raspi-config
+
+Navigate to `Localisation Options` > `Keyboard` > `Keyboard Layout`, then follow the prompts to select your keyboard model and layout.
 
 ### Updating the Raspberry Pi
 
