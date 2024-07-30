@@ -1,6 +1,6 @@
-# Zeughaus Footswitch Audio Player
+# Zeughaus Footswitch Audio Player (Simple Version)
 
-This project uses USB footswitches to play different audio files on a Raspberry Pi. The system is set up as a service that starts on boot and listens for footswitch inputs to play corresponding audio files.
+This project uses USB footswitches to play different audio files on a Raspberry Pi. The system is set up as a service that starts on boot and listens for footswitch inputs to play a corresponding audio file.
 
 ## Table of Contents
 
