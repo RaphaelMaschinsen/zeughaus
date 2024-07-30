@@ -102,9 +102,13 @@ Start the service:
 
 ## Checking the Logs
 
-To see the logs for the service and troubleshoot any issues, you can use the following command:
+To see the logs for the service since the last boot and troubleshoot any issues, you can use the following command:
 
-    sudo journalctl -u zeughaus.service -f
+    sudo journalctl -u zeughaus.service -b
+
+To see if the service is running:
+
+    sudo journalctl status zeughaus.service
 
 ## Troubleshooting
 
