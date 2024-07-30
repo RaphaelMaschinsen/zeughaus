@@ -70,9 +70,13 @@ You can download the larger Audio file from google drive with wget. An easy way 
 
     gedit README.md
 
-And then copy this next block out and paste it into the terminal:
+And then copy this next block out and paste it into the terminal to download the very large audio file:
 
     wget --no-check-certificate "https://drive.google.com/uc?export=download&id=1tNaFGEDqVOImcn3eANmDV6DPHLmJ-mUM" -O File.wav
+
+Or this code to download the smaller audio file:
+
+    wget --no-check-certificate "FILE HAS NOT BEEN UPLOADED TO GOOGLDE DRIVE YET" -O File.wav
 
 ### Configuring ALSA for Audio Output
 
