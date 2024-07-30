@@ -38,8 +38,8 @@ First, ensure your Raspberry Pi is up-to-date. Open a terminal and run:
 
 Clone the GitHub repository to your Raspberry Pi:
 
-    git clone https://github.com/your-username/zeughaus-switch.git
-    cd zeughaus-switch
+    git clone https://github.com/your-username/zeughaus.git
+    cd zeughaus
 
 Switch to the appropriate branch for your project:
 
@@ -54,8 +54,8 @@ You need to install Python and necessary libraries, as well as `alsa-utils` for 
 
 Next, create a virtual environment for your project:
 
-    python3 -m venv ~/zeughaus-switch/env
-    source ~/zeughaus-switch/env/bin/activate
+    python3 -m venv ~/zeughaus/env
+    source ~/zeughaus/env/bin/activate
 
 ### Installing Python Libraries
 
@@ -85,7 +85,7 @@ Save and exit the file.
 
 Copy your `99-footswitch.rules` file to the correct directory to set up udev rules:
 
-    sudo cp /home/pi/zeughaus-switch/99-footswitch.rules /etc/udev/rules.d/
+    sudo cp /home/pi/zeughaus/99-footswitch.rules /etc/udev/rules.d/
     sudo udevadm control --reload-rules
     sudo udevadm trigger
 
@@ -93,7 +93,7 @@ Copy your `99-footswitch.rules` file to the correct directory to set up udev rul
 
 Copy your service file to the systemd directory:
 
-    sudo cp /home/pi/zeughaus-switch/zeughaus.service /etc/systemd/system/
+    sudo cp /home/pi/zeughaus/zeughaus.service /etc/systemd/system/
 
 Reload the systemd daemon to recognize the new service:
 
