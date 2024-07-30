@@ -27,7 +27,7 @@ def play_audio(file_path):
         if current_process:
             current_process.terminate()
             current_process.wait()
-        current_process = subprocess.Popen(['aplay', file_path, '-D', audio_device])
+        current_process = subprocess.Popen(['aplay', file_path])
 
 def monitor_device(device):
     print(f'Start monitoring {device.path}')
