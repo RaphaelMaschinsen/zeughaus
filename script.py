@@ -15,6 +15,7 @@ audio_files = {
 device_paths = ['/dev/footswitch1', '/dev/footswitch2', '/dev/footswitch3']
 
 devices = [InputDevice(path) for path in device_paths]
+audio_device = 'hw:1,0'
 
 running = True
 playback_lock = threading.Lock()
@@ -26,7 +27,7 @@ def play_audio(file_path):
         if current_process:
             current_process.terminate()
             current_process.wait()
-        current_process = subprocess.Popen(['aplay -D hw:1,0', file_path])
+        current_process = subprocess.Popen(['aplay', file_path, '-D', audio_device])
 
 def monitor_device(device):
     print(f'Start monitoring {device.path}')
