@@ -1,16 +1,16 @@
-# Zeughaus Footswitch Audio Player
+# Zeughaus Audio Player (Loop Version)
 
-This project uses USB footswitches to play different audio files on a Raspberry Pi. The system is set up as a service that starts on boot and listens for footswitch inputs to play corresponding audio files.
+This project plays an audio file on a loop on a Raspberry Pi. The system is set up as a service that starts on boot and continuously plays the specified audio file.
 
 ## Table of Contents
 
 - [Setup](#setup)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
+  - [Configuring Keyboard Layout](#configuring-keyboard-layout)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
   - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
   - [Installing Required Packages](#installing-required-packages)
   - [Configuring ALSA for Audio Output](#configuring-alsa-for-audio-output)
-  - [Creating and Deploying Udev Rules](#creating-and-deploying-udev-rules)
   - [Creating and Enabling the Service](#creating-and-enabling-the-service)
 - [Checking the Logs](#checking-the-logs)
 - [Troubleshooting](#troubleshooting)
@@ -21,11 +21,19 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 
 1. Download the Raspberry Pi Imager from the official Raspberry Pi website: [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
 2. Install and run the Raspberry Pi Imager.
-3. Choose the Model you are using (at the time of writing this it is Raspberry Pi 2 Model B)
+3. Choose the Model you are using (at the time of writing this it is Raspberry Pi 2 Model B).
 4. Select "Raspberry Pi OS (32-bit)" as the operating system.
-5. In the Settings unselect everything except of 'Set Username and Password' and choose 'pi' as the username and as the password
+5. In the Settings unselect everything except for 'Set Username and Password' and choose 'pi' as the username and as the password.
 6. Choose your SD card and click "Continue" to start the installation process.
 7. Once the process is complete, insert the SD card into your Raspberry Pi and power it on.
+
+### Configuring Keyboard Layout
+
+To change the keyboard layout, use the `raspi-config` tool:
+
+    sudo raspi-config
+
+Navigate to `Localisation Options` > `Keyboard` > `Keyboard Layout`, then follow the prompts to select your keyboard model and layout.
 
 ### Updating the Raspberry Pi
 
@@ -43,8 +51,8 @@ Clone the GitHub repository to your Raspberry Pi:
 
 Switch to the appropriate branch for your project:
 
-    git checkout zeughaus-switch
-    git pull origin zeughaus-switch
+    git checkout zeughaus-loop
+    git pull origin zeughaus-loop
 
 ### Installing Required Packages
 
@@ -81,14 +89,6 @@ Change them to:
 
 Save and exit the file.
 
-### Creating and Deploying Udev Rules
-
-Copy your `99-footswitch.rules` file to the correct directory to set up udev rules:
-
-    sudo cp /home/pi/zeughaus/99-footswitch.rules /etc/udev/rules.d/
-    sudo udevadm control --reload-rules
-    sudo udevadm trigger
-
 ### Creating and Enabling the Service
 
 Copy your service file to the systemd directory:
@@ -115,8 +115,6 @@ To see the logs for the service since the last boot and troubleshoot any issues,
 
 ## Troubleshooting
 
-If the footswitches are not recognized after a reboot, make sure the udev rules are correctly applied and check for any errors in the logs.
-
 To stop the service:
 
     sudo systemctl stop zeughaus.service
@@ -130,3 +128,8 @@ To check the status of the service:
     sudo systemctl status zeughaus.service
 
 For any issues with audio output, ensure that ALSA is configured correctly and that the correct audio device is set.
+
+
+
+
+
