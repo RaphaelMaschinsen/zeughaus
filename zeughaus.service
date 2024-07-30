@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/home/pi/zeughaus/env/bin/python3 /home/pi/zeughaus/script.py
-WorkingDirectory=/home/pi/zeughaus-switch
+WorkingDirectory=/home/pi/zeughaus
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
