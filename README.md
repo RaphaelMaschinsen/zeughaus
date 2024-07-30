@@ -108,10 +108,6 @@ To see the logs for the service since the last boot and troubleshoot any issues,
 
     sudo journalctl -u zeughaus.service -b
 
-To see if the service is running:
-
-    sudo journalctl status zeughaus.service
-
 ## Troubleshooting
 
 If the footswitches are not recognized after a reboot, make sure the udev rules are correctly applied and check for any errors in the logs.
