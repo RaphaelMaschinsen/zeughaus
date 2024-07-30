@@ -3,7 +3,7 @@ import threading
 import signal
 import sys
 
-audio_file = 'File1.wav'  # The file to play on loop
+audio_file = 'File.wav'  # The file to play on loop
 
 running = True
 current_process = None
