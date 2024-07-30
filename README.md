@@ -53,7 +53,7 @@ First, ensure your Raspberry Pi is up-to-date. Open a terminal and run:
 
 Clone the GitHub repository to your Raspberry Pi:
 
-    git clone https://github.com/your-username/zeughaus.git
+    git clone https://github.com/RaphaelMaschinsen/zeughaus.git
     cd zeughaus
 
 Switch to the appropriate branch for your project:
