@@ -53,7 +53,6 @@ Clone the GitHub repository to your Raspberry Pi:
 Switch to the appropriate branch for your project:
 
     git checkout zeughaus-loop
-    git pull origin zeughaus-loop
 
 ### Installing Required Packages
 
