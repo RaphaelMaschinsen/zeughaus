@@ -15,7 +15,7 @@ audio_files = {
 device_paths = ['/dev/footswitch1', '/dev/footswitch2', '/dev/footswitch3']
 
 devices = [InputDevice(path) for path in device_paths]
-audio_device = 'hw:1,0'
+audio_device = 'hw:0,0'
 
 running = True
 playback_lock = threading.Lock()
