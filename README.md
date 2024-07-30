@@ -60,7 +60,6 @@ Clone the GitHub repository to your Raspberry Pi:
 Switch to the appropriate branch for your project:
 
     git checkout zeughaus-switch
-    git pull origin zeughaus-switch
 
 ### Installing Required Packages
 
