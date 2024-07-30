@@ -5,6 +5,7 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 ## Table of Contents
 
 - [Setup](#setup)
+  - [Important: USB Hub and Footswitch Connection](#important-usb-hub-and-footswitch-connection)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
   - [Configuring Keyboard Layout](#configuring-keyboard-layout)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
@@ -17,6 +18,12 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 - [Troubleshooting](#troubleshooting)
 
 ## Setup
+
+### Important: USB Hub and Footswitch Connection
+
+1. Ensure the USB hub is plugged into the upper USB port on the Raspberry Pi.
+2. Use the officially supported USB hub: 'usb3.0-SuperSpeed 4Ports Hub'.
+3. Connect the footswitches to port 1, port 2, and port 3 of the USB hub.
 
 ### Installing Raspberry Pi OS
 
