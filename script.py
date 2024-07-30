@@ -6,16 +6,14 @@ import threading
 import signal
 import sys
 
-audio_files = {
-    'KEY_A': 'File1.wav',
-    'KEY_B': 'File2.wav',
-    'KEY_Y': 'File3.wav',
-}
+# Define the audio file to be played
+audio_file = 'File1.wav'
 
-device_paths = ['/dev/footswitch1', '/dev/footswitch2', '/dev/footswitch3']
+# Path to the input device (footswitch)
+device_path = '/dev/footswitch'
 
-devices = [InputDevice(path) for path in device_paths]
-audio_device = 'hw:0,0'
+# Initialize the input device
+device = InputDevice(device_path)
 
 running = True
 playback_lock = threading.Lock()
@@ -41,11 +39,10 @@ def monitor_device(device):
                     key_event = categorize(event)
                     if key_event.keystate == key_event.key_down:
                         key_code = key_event.keycode
-                        if key_code in audio_files:
-                            print(f'Key {key_code} pressed on {device.path}, playing {audio_files[key_code]}')
-                            play_audio(audio_files[key_code])
-                            # Break the loop to handle the next input immediately
-                            break
+                        print(f'Key {key_code} pressed on {device.path}, playing {audio_file}')
+                        play_audio(audio_file)
+                        # Break the loop to handle the next input immediately
+                        break
     finally:
         device.ungrab()
 
@@ -53,24 +50,19 @@ def signal_handler(sig, frame):
     global running
     print('Exiting gracefully...')
     running = False
-    for device in devices:
-        device.close()
+    device.close()
     sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
-print(f'Listening for key presses on {device_paths}...')
+print(f'Listening for key presses on {device_path}...')
 
-threads = []
-for device in devices:
-    thread = threading.Thread(target=monitor_device, args=(device,))
-    threads.append(thread)
-    thread.start()
+thread = threading.Thread(target=monitor_device, args=(device,))
+thread.start()
 
 # Keep the main thread alive
 while running:
     signal.pause()
 
-for device in devices:
-    device.close()
+device.close()
