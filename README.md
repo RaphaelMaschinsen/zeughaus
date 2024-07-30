@@ -69,7 +69,7 @@ Next, create a virtual environment for your project:
 
 You can download the larger Audio file from google drive with wget:
 
-    wget --no-check-certificate "https://drive.google.com/uc?export=download&id=1tNaFGEDqVOImcn3eANmDV6DPHLmJ-mUM" -O File1.wav
+    wget --no-check-certificate "https://drive.google.com/uc?export=download&id=1tNaFGEDqVOImcn3eANmDV6DPHLmJ-mUM" -O File.wav
 
 ### Configuring ALSA for Audio Output
 
