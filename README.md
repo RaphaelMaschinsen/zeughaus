@@ -1,4 +1,4 @@
-# Raspberry Pi Project Setup For Zeughaus Bachtage Exhibition
+# Raspberry Pi Project Setup for Zeughaus Bachtage Exhibition
 
 This repository is intended to help set up Raspberry Pis. There are three specific branches you can switch to, each providing the setup instructions and files for different projects.
 
