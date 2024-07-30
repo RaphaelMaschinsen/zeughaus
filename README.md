@@ -10,7 +10,7 @@ This project plays an audio file on a loop on a Raspberry Pi. The system is set 
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
   - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
   - [Installing Required Packages](#installing-required-packages)
-  - [Downloading Large File From Google Drive](#downloading-large-file-from-gdrive)
+  - [Downloading Large File From Google Drive](#downloading-large-file-from-google-drive)
   - [Configuring ALSA for Audio Output](#configuring-alsa-for-audio-output)
   - [Creating and Enabling the Service](#creating-and-enabling-the-service)
 - [Checking the Logs](#checking-the-logs)
