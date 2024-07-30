@@ -46,7 +46,7 @@ First, ensure your Raspberry Pi is up-to-date. Open a terminal and run:
 
 Clone the GitHub repository to your Raspberry Pi:
 
-    git clone https://github.com/your-username/zeughaus.git
+    git clone https://github.com/RaphaelMaschinsen/zeughaus.git
     cd zeughaus
 
 Switch to the appropriate branch for your project:
@@ -58,12 +58,12 @@ Switch to the appropriate branch for your project:
 
 You need to install Python and necessary libraries, as well as `alsa-utils` for sound management:
 
-    sudo apt install python3 python3-venv python3-pip alsa-utils
+    sudo apt install python3 python3-virtualenv python3-pip alsa-utils
 
 Next, create a virtual environment for your project:
 
-    python3 -m venv ~/zeughaus/env
-    source ~/zeughaus/env/bin/activate
+    python3 -m virtualenv env
+    source env/bin/activate
 
 ### Installing Python Libraries
 
