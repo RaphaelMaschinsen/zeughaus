@@ -66,7 +66,7 @@ Next, create a virtual environment for your project:
 
 ### Downloading Large File From Google Drive
 
-You can download the larger Audio file from google drive with wget. An easy way to do this is to at first open the README.md with getit like so:
+You can download the larger Audio file from google drive with wget. An easy way to do this is to at first open the readme with getit like so:
 
     gedit README.md
 
