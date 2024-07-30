@@ -1,4 +1,4 @@
-# Footswitch Audio Player
+# Zeughaus Footswitch Audio Player
 
 This project uses USB footswitches to play different audio files on a Raspberry Pi. The system is set up as a service that starts on boot and listens for footswitch inputs to play corresponding audio files.
 
@@ -7,11 +7,11 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 - [Setup](#setup)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
+  - [Cloning the Repository](#cloning-the-repository)
   - [Installing Required Packages](#installing-required-packages)
   - [Configuring ALSA for Audio Output](#configuring-alsa-for-audio-output)
   - [Creating and Deploying Udev Rules](#creating-and-deploying-udev-rules)
   - [Creating and Enabling the Service](#creating-and-enabling-the-service)
-- [Script and Audio Files](#script-and-audio-files)
 - [Checking the Logs](#checking-the-logs)
 - [Troubleshooting](#troubleshooting)
 
@@ -31,6 +31,13 @@ First, ensure your Raspberry Pi is up-to-date. Open a terminal and run:
 
     sudo apt update
     sudo apt upgrade -y
+
+### Cloning the Repository
+
+Clone the GitHub repository to your Raspberry Pi:
+
+    git clone https://github.com/your-username/zeughaus-switch.git
+    cd zeughaus-switch
 
 ### Installing Required Packages
 
@@ -92,10 +99,6 @@ Enable the service to start on boot:
 Start the service:
 
     sudo systemctl start zeughaus.service
-
-## Script and Audio Files
-
-Make sure your `script.py`, audio files (`File1.wav`, `File2.wav`, `File3.wav`), and udev rules file (`99-footswitch.rules`) are all in the `/home/pi/zeughaus-switch/` directory.
 
 ## Checking the Logs
 
