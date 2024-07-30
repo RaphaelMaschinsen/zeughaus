@@ -6,6 +6,7 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 
 - [Setup](#setup)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
+  - [Important: Footswitch Connection](#important-footswitch-connection)
   - [Configuring Keyboard Layout](#configuring-keyboard-layout)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
   - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
@@ -17,6 +18,11 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 - [Troubleshooting](#troubleshooting)
 
 ## Setup
+
+### Important: Footswitch Connection
+
+1. Ensure the footswitch is plugged directly into the upper USB port on the Raspberry Pi.
+2. Use the officially supported USB footswitch model.
 
 ### Installing Raspberry Pi OS
 
