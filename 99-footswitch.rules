@@ -1,3 +1,3 @@
-SUBSYSTEM=="input", ENV{ID_PATH}=="*usb-0:1.2.1*", ENV{DEVLINKS}=="*kbd*", SYMLINK+="footswitch1"
-SUBSYSTEM=="input", ENV{ID_PATH}=="*usb-0:1.2.2*", ENV{DEVLINKS}=="*kbd*", SYMLINK+="footswitch2"
-SUBSYSTEM=="input", ENV{ID_PATH}=="*usb-0:1.2.3*", ENV{DEVLINKS}=="*kbd*", SYMLINK+="footswitch3"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.1*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch1"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.2*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch2"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.3*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch3"
