@@ -63,13 +63,6 @@ You need to install Python and necessary libraries, as well as `alsa-utils` for 
 Next, create a virtual environment for your project:
 
     python3 -m virtualenv env
-    source env/bin/activate
-
-### Installing Python Libraries
-
-Install the required Python libraries using pip:
-
-    pip install evdev
 
 ### Configuring ALSA for Audio Output
 
