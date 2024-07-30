@@ -7,7 +7,7 @@ import signal
 import sys
 
 # Define the audio file to be played
-audio_file = 'File1.wav'
+audio_file = 'File.wav'
 
 # Path to the input device (footswitch)
 device_path = '/dev/footswitch'
