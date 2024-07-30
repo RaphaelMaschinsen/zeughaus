@@ -1,1 +1,1 @@
-SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2.1*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch"
+SUBSYSTEM=="input", ATTRS{phys}=="*usb-1.2*", ATTRS{name}=="MKEYBOARD Keyboard", SYMLINK+="footswitch"
