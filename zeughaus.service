@@ -3,7 +3,7 @@ Description=Footswitch Audio Player Service
 After=network.target
 
 [Service]
-ExecStart=/home/pi/zeughaus-switch/env/bin/python3 /home/pi/zeughaus-switch/script.py
+ExecStart=/home/pi/zeughaus/env/bin/python3 /home/pi/zeughaus/script.py
 WorkingDirectory=/home/pi/zeughaus-switch
 StandardOutput=inherit
 StandardError=inherit
