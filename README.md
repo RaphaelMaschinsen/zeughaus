@@ -10,7 +10,7 @@ This repository is intended to help set up the Raspberry Pis. There are three sp
 
 ## Getting Started
 
-1. On the github page for this project, witch to the desired branch with the little branch dropdown menu below.
+1. On the github page for this project, witch to the desired branch with the little branch dropdown menu below the project title.
 2. Follow the instructions in the `README.md` file within the selected branch to set up your Raspberry Pi for the project.
 
 For any issues or questions, please refer to the `README.md` file in the respective branch for troubleshooting tips and contact information.
