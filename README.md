@@ -7,7 +7,7 @@ This project uses USB footswitches to play different audio files on a Raspberry 
 - [Setup](#setup)
   - [Installing Raspberry Pi OS](#installing-raspberry-pi-os)
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
-  - [Cloning the Repository](#cloning-the-repository)
+  - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
   - [Installing Required Packages](#installing-required-packages)
   - [Configuring ALSA for Audio Output](#configuring-alsa-for-audio-output)
   - [Creating and Deploying Udev Rules](#creating-and-deploying-udev-rules)
@@ -34,12 +34,17 @@ First, ensure your Raspberry Pi is up-to-date. Open a terminal and run:
     sudo apt update
     sudo apt upgrade -y
 
-### Cloning the Repository
+### Cloning the Repository and Switching Branches
 
 Clone the GitHub repository to your Raspberry Pi:
 
     git clone https://github.com/your-username/zeughaus-switch.git
     cd zeughaus-switch
+
+Switch to the appropriate branch for your project:
+
+    git checkout zeughaus-switch
+    git pull origin zeughaus-switch
 
 ### Installing Required Packages
 
