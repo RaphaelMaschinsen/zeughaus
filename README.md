@@ -66,7 +66,7 @@ Switch to the appropriate branch for your project:
 
 You need to install Python and necessary libraries, as well as `alsa-utils` for sound management:
 
-    sudo apt install python3 python3-virtualenv python3-pip alsa-utils
+    sudo apt install gedit python3 python3-virtualenv python3-pip alsa-utils
 
 Next, create a virtual environment for your project (within the zeughaus folder):
 
