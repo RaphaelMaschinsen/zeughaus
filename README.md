@@ -64,6 +64,10 @@ Next, create a virtual environment for your project:
 
     python3 -m virtualenv env
 
+Then activate:
+
+    source env/bin/activate
+
 ### Downloading the large audio file from Google Drive
 
 You can download the larger Audio file from google drive with wget. An easy way to do this is to at first open the readme with getit like so:
