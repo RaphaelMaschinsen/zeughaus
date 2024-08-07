@@ -83,7 +83,7 @@ You can download the Audio files from google drive with wget. An easy way to do 
 
 And then copy these commands one by one and paste them into the terminal to download the audio files:
 
-    wget --no-check-certificate "https://drive.google.com/file/d/1RhaU4H2V4ddKof_z0e9zT2l_WXaDrynk" -O File.wav
+    wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1RhaU4H2V4ddKof_z0e9zT2l_WXaDrynk' -O File.wav
 
 ### Installing Python Libraries
 
