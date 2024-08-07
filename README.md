@@ -74,13 +74,13 @@ You can download the larger Audio file from google drive with wget. An easy way 
 
     gedit README.md
 
-And then copy this next block out and paste it into the terminal to download the very large audio file:
+And then copy this next block out and paste it into the terminal to download the Loop1 audio file:
 
-    wget --no-check-certificate "https://drive.google.com/file/d/1uKsJsVJhhpd17EF4GcNRUIUOb97-OAJe" -O File.wav
+    wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1uKsJsVJhhpd17EF4GcNRUIUOb97-OAJe' -O File.wav
 
-Or this code to download the smaller audio file:
+Or this code to download the Loop2 audio file:
 
-    wget --no-check-certificate "https://drive.google.com/file/d/1KXIG4R8Vve2ZXlJ9BJxITwNjBsl-7D8u" -O File.wav
+    wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1KXIG4R8Vve2ZXlJ9BJxITwNjBsl-7D8u' -O File.wav
 
 ### Configuring ALSA for Audio Output
 
