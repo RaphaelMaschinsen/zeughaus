@@ -11,6 +11,7 @@ This project uses USB footswitches to play different audio files on a Raspberry 
   - [Updating the Raspberry Pi](#updating-the-raspberry-pi)
   - [Cloning the Repository and Switching Branches](#cloning-the-repository-and-switching-branches)
   - [Installing Required Packages](#installing-required-packages)
+  - [Downloading the large audio file from Google Drive](#downloading-the-large-audio-file-from-google-drive)
   - [Configuring ALSA for Audio Output](#configuring-alsa-for-audio-output)
   - [Creating and Deploying Udev Rules](#creating-and-deploying-udev-rules)
   - [Creating and Enabling the Service](#creating-and-enabling-the-service)
@@ -73,6 +74,16 @@ Next, create a virtual environment for your project (within the zeughaus folder)
 Then activate:
 
     source env/bin/activate
+
+### Downloading the large audio file from Google Drive
+
+You can download the Audio files from google drive with wget. An easy way to do this is to at first open the readme with getit like so:
+
+    gedit README.md
+
+And then copy these commands one by one and paste them into the terminal to download the audio files:
+
+    wget --no-check-certificate "https://drive.google.com/file/d/1-IIKx6UeGYzfwNDlefj1MpjoddJfrZMt" -O File.wav
 
 ### Installing Python Libraries
 
